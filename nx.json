@@ -24,17 +24,9 @@
         "startTargetName": "start",
         "serveStaticTargetName": "serve-static"
       }
-    },
-    {
-      "plugin": "@nx/nest/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "testTargetName": "test",
-        "lintTargetName": "lint"
-      }
     }
   ],
+
   "targetDefaults": {
     "build": {
       "cache": true,

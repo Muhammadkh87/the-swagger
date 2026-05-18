@@ -13,11 +13,54 @@ services:
       - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - the-swagger-net
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres']
-      interval: 10s
+      interval: 5s
       timeout: 5s
-      retries: 5
+      retries: 10
+      start_period: 30s
+
+  api:
+    image: swagger-api:latest
+    container_name: the-swagger-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/the_swagger_dev?schema=public"
+      JWT_SECRET: "your-super-secret-jwt-key-change-in-production"
+      JWT_EXPIRES_IN: "7d"
+      PORT: 4200
+      NODE_ENV: production
+      COOKIE_SECRET: "your-cookie-secret-change-in-production"
+      CORS_ORIGIN: "http://localhost:4000"
+    ports:
+      - '4200:4200'
+    networks:
+      - the-swagger-net
+
+  web:
+    image: swagger-web:latest
+    container_name: swagger-web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_started
+    environment:
+      API_BASE_URL: "http://the-swagger-api:4200"
+      NODE_ENV: production
+      PORT: 4000
+    ports:
+      - '4000:4000'
+    networks:
+      - the-swagger-net
 
 volumes:
   postgres_data:
+
+networks:
+  the-swagger-net:
+    external: true
