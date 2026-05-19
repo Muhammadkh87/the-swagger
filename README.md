@@ -214,9 +214,9 @@ Application Load Balancer (swagger-lb)
 |----------|-------|
 | Account ID | YOUR_AWS_ACCOUNT_ID |
 | Region | YOUR_REGION |
-| ECR | <account-id>.dkr.ecr.ap-southeast-2.amazonaws.com |
+| ECR | `<account-id>`.dkr.ecr.ap-southeast-2.amazonaws.com |
 | ECS Cluster | the-swagger-cluster |
-| RDS | <rds-endpoint>.ap-southeast-2.rds.amazonaws.com |
+| RDS | `<rds-endpoint>`.ap-southeast-2.rds.amazonaws.com |
  
 ---
  
