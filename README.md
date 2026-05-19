@@ -145,7 +145,7 @@ pnpm dev
  
 This starts both the API (port 4200) and the web app (port 4000) concurrently.
  
-Open [http://localhost:4000](http://localhost:4000) in your browser.
+Open [http://localhost:4000](http://localhost:4000) browser.
  
 ---
  
@@ -213,7 +213,7 @@ Application Load Balancer (swagger-lb)
 | Resource | Value |
 |----------|-------|
 | Account ID | YOUR_AWS_ACCOUNT_ID |
-| Region | ap-southeast-2 |
+| Region | YOUR_REGION |
 | ECR | <account-id>.dkr.ecr.ap-southeast-2.amazonaws.com |
 | ECS Cluster | the-swagger-cluster |
 | RDS | <rds-endpoint>.ap-southeast-2.rds.amazonaws.com |
