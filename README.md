@@ -212,11 +212,11 @@ Application Load Balancer (swagger-lb)
  
 | Resource | Value |
 |----------|-------|
-| Account ID | 853191155610 |
+| Account ID | YOUR_AWS_ACCOUNT_ID |
 | Region | ap-southeast-2 |
-| ECR | 853191155610.dkr.ecr.ap-southeast-2.amazonaws.com |
+| ECR | <account-id>.dkr.ecr.ap-southeast-2.amazonaws.com |
 | ECS Cluster | the-swagger-cluster |
-| RDS | the-swagger-db.c1sae2kk8c51.ap-southeast-2.rds.amazonaws.com |
+| RDS | <rds-endpoint>.ap-southeast-2.rds.amazonaws.com |
  
 ---
  
@@ -283,7 +283,7 @@ ECS task definitions accumulate old registered versions over time. Added a clean
 ### Dashboard
 ![Dashboard](./docs/screenshots/app-live-on-ecs.png)
  
- 
+
 ### CI/CD Pipeline — GitHub Actions
 ![Pipeline](./docs/screenshots/pipeline.png)
  
