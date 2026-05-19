@@ -283,8 +283,6 @@ ECS task definitions accumulate old registered versions over time. Added a clean
 ### Dashboard
 ![Dashboard](./docs/screenshots/app-live-on-ecs.png)
  
-### Running Locally
-![Localhost](./docs/screenshots/localhost.png)
  
 ### CI/CD Pipeline — GitHub Actions
 ![Pipeline](./docs/screenshots/pipeline.png)
