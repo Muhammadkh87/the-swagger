@@ -9,7 +9,7 @@ on:
       - '.github/workflows/deploy-web.yml'
   workflow_dispatch:
 env:
-  AWS_REGION: ap-south-1
+  AWS_REGION: ap-southeast-2
   ECR_REPOSITORY: the-swagger-web
   ECS_CLUSTER: the-swagger-cluster
   ECS_SERVICE: the-swagger-web-service

@@ -10,7 +10,7 @@ on:
       - 'docker-entrypoint.sh'
       - '.github/workflows/deploy-api.yml'
 env:
-  AWS_REGION: ap-south-1
+  AWS_REGION: ap-southeast-2
   ECR_REPOSITORY: the-swagger-api
   ECS_CLUSTER: the-swagger-cluster
   ECS_SERVICE: the-swagger-api-service
