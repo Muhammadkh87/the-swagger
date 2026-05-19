@@ -19,7 +19,7 @@ async function main() {
 
   const admin = await prisma.user.create({
     data: {
-      email: 'admin@devopsmolvi.com',
+      email: 'admin@devopscookie.com',
       password,
       firstName: 'Alex',
       lastName: 'Admin',
@@ -31,7 +31,7 @@ async function main() {
 
   const manager = await prisma.user.create({
     data: {
-      email: 'manager@devopsmolvi.com',
+      email: 'manager@devopscookie.com',
       password,
       firstName: 'Maya',
       lastName: 'Manager',
@@ -43,7 +43,7 @@ async function main() {
 
   const client = await prisma.user.create({
     data: {
-      email: 'client@devopsmolvi.com',
+      email: 'client@devopscookie.com',
       password,
       firstName: 'Chris',
       lastName: 'Client',
@@ -55,7 +55,7 @@ async function main() {
 
   const contractor = await prisma.user.create({
     data: {
-      email: 'contractor@devopsmolvi.com',
+      email: 'contractor@devopscookie.com',
       password,
       firstName: 'Connor',
       lastName: 'Contractor',
@@ -67,7 +67,7 @@ async function main() {
 
   const viewer = await prisma.user.create({
     data: {
-      email: 'viewer@devopsmolvi.com',
+      email: 'viewer@devopscookie.com',
       password,
       firstName: 'Victor',
       lastName: 'Viewer',
@@ -245,11 +245,11 @@ async function main() {
   console.log('─────────────────────────────────────────────');
   console.log('Test Credentials (all passwords: Password123!)');
   console.log('─────────────────────────────────────────────');
-  console.log('admin@devopsmolvi.com       → ADMIN');
-  console.log('manager@devopsmolvi.com     → DESIGN_MANAGER');
-  console.log('client@devopsmolvi.com      → CLIENT');
-  console.log('contractor@devopsmolvi.com  → CONTRACTOR');
-  console.log('viewer@devopsmolvi.com      → VIEWER');
+  console.log('admin@devopscookie.com       → ADMIN');
+  console.log('manager@devopscookie.com     → DESIGN_MANAGER');
+  console.log('client@devopscookie.com      → CLIENT');
+  console.log('contractor@devopscookie.com  → CONTRACTOR');
+  console.log('viewer@devopscookie.com      → VIEWER');
   console.log('─────────────────────────────────────────────\n');
 }
 

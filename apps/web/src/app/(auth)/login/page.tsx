@@ -54,7 +54,7 @@ function LoginForm() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@devopsmolvi.com"
+              placeholder="you@devopscookie.com"
               required
               className="w-full px-3 py-2.5 rounded-lg border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-sm"
             />
@@ -84,10 +84,10 @@ function LoginForm() {
           <p className="text-xs text-slate-500 font-medium mb-2">Quick login — test accounts</p>
           <div className="grid grid-cols-2 gap-2">
             {[
-              { label: 'Admin', email: 'admin@devopsmolvi.com' },
-              { label: 'Manager', email: 'manager@devopsmolvi.com' },
-              { label: 'Client', email: 'client@devopsmolvi.com' },
-              { label: 'Contractor', email: 'contractor@devopsmolvi.com' },
+              { label: 'Admin', email: 'admin@devopscookie.com' },
+              { label: 'Manager', email: 'manager@devopscookie.com' },
+              { label: 'Client', email: 'client@devopscookie.com' },
+              { label: 'Contractor', email: 'contractor@devopscookie.com' },
             ].map(({ label, email: e }) => (
               <button
                 key={label}
