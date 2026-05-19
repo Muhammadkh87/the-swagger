@@ -56,6 +56,18 @@ jobs:
             --task-definition the-swagger-api \
             --query taskDefinition \
             > task-definition-api-current.json
+      
+      - name: Clean task definition
+        run: |
+          cat task-definition-api-current.json | \
+          python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)
+          for k in ['taskDefinitionArn','requiresAttributes','compatibilities','registeredAt','registeredBy','status','revision','enableFaultInjection']:
+            d.pop(k,None)
+          print(json.dumps(d))
+          " > task-definition-api-clean.json
+          mv task-definition-api-clean.json task-definition-api-current.json
 
       - name: Update ECS task definition with new image
         id: task-def
